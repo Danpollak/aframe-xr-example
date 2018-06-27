@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A-Frame / WebXR - Example</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src='https://aframe.io/releases/0.8.2/aframe.min.js'></script>
+    <script src='https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js'></script>
+    <script src='./lib/three.xr.js'></script>
+    <script src='./lib/aframe-xr.js'></script>
+    <!-- <script src='./components/spawn.js'></script> -->
+  </head>
+  <body>
+    <a-scene xr>
+        <a-assets>
+                <a-asset-item id="robot" src="./public/BrainStem.gltf" >
+        </a-assets>
+
+        <a-gltf-model id="model" src='#robot' animation-mixer xr="vr: false; ar:true; magicWindow: true" />
+    </a-scene>
+  </body>
+</html>
